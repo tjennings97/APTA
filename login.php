@@ -5,13 +5,13 @@ Capstone: Academic Progress Tracker for Athletics
 Filename: login.php
 Purpose: Form to login
 -->
-<?php 
+<?php
      session_start();
 require_once("head.html");
 require_once("loginFunctions.html");
 ?>
 
-
+</style>
 <div>
     <!--right side of page-->
     <div class='floating'>
@@ -20,8 +20,7 @@ require_once("loginFunctions.html");
     <!--left side of page-->
     <div class='floating'>
         <h2>Welcome!</h2>
-	<p>Please sign in below.</p>
-
+        <p>Please sign in below.</p>
 
         <table>
         <form method = "post"
@@ -54,13 +53,14 @@ require_once("loginFunctions.html");
             </tr>
         </table>
 
-        <p><input type = "submit" name = "submit" value = "Login"/>
-        <input type = "reset" value = "Clear"/></p>
+        <p><input class='coolButton' type = "submit" name = "submit" value = "Login"/>
+        <input class='coolButton' type = "reset" value = "Clear"/></p>
 
         </form>
 
-    </div>
+     </div>
 </div>
     <?php require_once("footer.html");?>
 
  <!--end login.php-->
+
