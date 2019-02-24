@@ -11,7 +11,6 @@ require_once("head.html");
 require_once("loginFunctions.html");
 ?>
 
-</style>
 <div>
     <!--right side of page-->
     <div class='floating'>
