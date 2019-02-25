@@ -9,11 +9,11 @@
 
 <script type = "text/javascript">
 <!--
-    // Function Name: checkLogin
-    // Description:   check that required fields are filled in properly 
-    // Parameters:    none
-    // Return Value:  true- form filled correctly
-    //                false - form filled incorrectly
+// Function Name: checkLogin
+// Description:   check that required fields are filled in properly 
+// Parameters:    none
+// Return Value:  true- form filled correctly
+//                false - form filled incorrectly
 function checkLogin()
 {
 	var focusFld = "";
@@ -26,17 +26,17 @@ function checkLogin()
 
 	//check Email
 	if(document.getElementById("Email").value == "")
-        {
+	{
 		document.getElementById("Email_label").style.color = "red";
 		if(focusFld == "")
 			focusFld = "Email";
-        }
+	}
 	if(document.getElementById("Email").value.indexOf('@') == -1)
-        {
+	{
 		document.getElementById("Email_label").style.color = "red";
 		if(focusFld == "")
 			focusFld = "Email";
-        } // end if Email  
+	} // end if Email  
 
 	//check Passwd
 	if(document.getElementById("Passwd").value == "")
@@ -63,11 +63,11 @@ function checkLogin()
 	return true;
 }//end function checkLogin
 
-      // Function Name: clearLoginForm
-      // Description:   Confirm reset of the form, return label names 
-      //                to black
-      // Parameters:    none
-      // Return Value:  false - form is not cleared
+// Function Name: clearLoginForm
+// Description:   Confirm reset of the form, return label names 
+//                to black
+// Parameters:    none
+// Return Value:  false - form is not cleared
 function clearLoginForm()
 {
 	var ans = confirm('Are you sure you want to reset the form?');
