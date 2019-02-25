@@ -1,0 +1,106 @@
+<!--
+ // Author: Tamara Jennings
+ // Creation Date: February 24, 2019
+ // Capstone: Academic Progress Tracker for Athletics
+ // Filename: createAccountFinctions.html
+ // Purpose: Verify create account form
+-->
+
+<script = "text/javascript">
+
+<!-- //hide from incompatible browsers
+
+// Function Name: checkCreateAccount
+// Description:   check that required fields are filled in properly
+//                and that the phone number is a valid entry
+// Parameters:    none
+// Return Value:  true- form filled correctly
+//                false - form filled incorrectly
+function checkCreateAccount()
+{
+	var focusFld = "";
+	     
+	//set all required labels to black
+	document.getElementById("FirstName_label").style.color = "black";
+	document.getElementById("LastName_label").style.color = "black";         
+	document.getElementById("Email_label").style.color = "black";
+	document.getElementById("Passwd_label").style.color = "black";
+
+	//check FirstName
+	if(document.getElementById("FirstName").value == "")                      
+	{
+		document.getElementById("FirstName_label").style.color = "red";          
+		focusFld = "FirstName";                                                  
+	}//end check FirstName
+     
+	//check LastName 
+	if(document.getElementById("LastName").value == "")                       
+	{     
+		document.getElementById("LastName_label").style.color = "red";           
+		if(focusFld == "")                                                       
+			focusFld = "LastName";                                                 
+	}//end check LastName
+     
+	//check email                                                             
+	if(document.getElementById("Email").value == "")                          
+	{ 
+		console.log("email is blank");
+		document.getElementById("Email_label").style.color = "red";
+		if(focusFld == "") 
+			focusFld = "Email";
+	}
+	if(document.getElementById("Email").value.indexOf('@') == -1)
+	{
+		console.log("email is doesn't hav @");
+		document.getElementById("Email_label").style.color = "red";
+		if(focusFld == "")
+			focusFld = "Email";
+	} // end if Email
+
+	
+	//check Passwd
+	if(document.getElementById("Passwd").value == "")
+	{
+		document.getElementById("Passwd_label").style.color = "red";
+		if(focusFld == "")
+			focusFld = "Passwd"; 
+	}
+	else if(document.getElementById("Passwd").value.length < 8)
+	{
+		document.getElementById("Passwd_label").style.color = "red";
+		if(focusFld == "")
+			focusFld = "Passwd";
+	}//end if Passwd
+
+	//if did not enter all required fields
+	if(focusFld != "")
+	{
+	        alert('Enter highlighted fields as directed.');
+	        document.getElementById(focusFld).focus();
+	        window.scroll(0,0);
+	        return false;
+	}//end else if
+	return true;
+} //end function checkCreateAccount  
+
+// Function Name: clearCreateAccountForm
+// Description:   Confirm reset of the form, return label names to black
+// Parameters:    none
+// Return Value:  false - form is not cleared
+
+function clearCreateAccountForm()
+{
+	var ans = confirm('Are you sure you want to reset the form?');
+	if(ans == false)
+		return false;
+	else
+	{
+		document.getElementById("FirstName_label").style.color = "black";
+		document.getElementById("LastName_label").style.color = "black";
+		document.getElementById("Email_label").style.color = "black";
+		document.getElementById("Passwd_label").style.color = "black";
+	}// end else
+}//end clearCreateAccountForm()
+
+//-->
+</script>
